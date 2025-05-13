@@ -1,0 +1,14 @@
+<design:component label="Custom Banner">
+    <design:attribute name="bannerHeight" label="Banner Height" default="200px" />
+    <design:attribute name="bannerWidth" label="Banner Width" default="100%" />
+    <design:attribute name="backgroundColor" label="Background Color" default="#ffffff" />
+    <design:attribute name="leftImageId" label="Left Image ID" />
+    <design:attribute name="rightImageId" label="Right Image ID" />
+    <design:attribute name="leftImageAlt" label="Left Image Alt Text" default="Left banner image" />
+    <design:attribute name="rightImageAlt" label="Right Image Alt Text" default="Right banner image" />
+    <design:attribute name="richTextContent" label="Rich Text Content" default="&lt;p&gt;Customizable Banner Text&lt;/p&gt;" />
+    <design:attribute name="textFontSize" label="Text Font Size" default="16px" />
+    <design:attribute name="textFontWeight" label="Text Font Weight" default="normal" />
+    <design:attribute name="textColor" label="Text Color" default="#000000" />
+    <design:attribute name="textAlignment" label="Text Alignment" default="center" />
+</design:component>

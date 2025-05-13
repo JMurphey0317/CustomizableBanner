@@ -1,0 +1,43 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" controller="BannerComponentController" access="global">
+    <aura:attribute name="bannerHeight" type="String" default="200px" />
+    <aura:attribute name="bannerWidth" type="String" default="100%" />
+    <aura:attribute name="backgroundColor" type="String" default="#ffffff" />
+    
+    <aura:attribute name="imageLeft" type="String" default="" description="Legacy attribute for left image ID" />
+    <aura:attribute name="leftImageWidth" type="String" default=""/>
+    <aura:attribute name="leftImageHeight" type="String" default=""/>
+    <aura:attribute name="imageRight" type="String" />
+    <aura:attribute name="rightImageWidth" type="String" default=""/>
+    <aura:attribute name="rightImageHeight" type="String" default=""/>
+    <aura:attribute name="imageHeight" type="String" />
+    <aura:attribute name="imageWidth" type="String" />
+    
+    <aura:attribute name="leftImageId" type="String" />
+    <aura:attribute name="rightImageId" type="String" />
+    <aura:attribute name="leftImageUrl" type="String" />
+    <aura:attribute name="rightImageUrl" type="String" />
+    <aura:attribute name="leftImageAlt" type="String" default="Left banner image" />
+    <aura:attribute name="rightImageAlt" type="String" default="Right banner image" />
+    
+    <aura:attribute name="richText" type="String" />
+    <aura:attribute name="textStyle" type="String" />
+    <aura:attribute name="richTextContent" type="String" default="&lt;p&gt;Customizable Banner Text&lt;/p&gt;" />
+    <aura:attribute name="textFontSize" type="String" default="16px" />
+    <aura:attribute name="textFontWeight" type="String" default="normal" />
+    <aura:attribute name="textColor" type="String" default="#000000" />
+    <aura:attribute name="textAlignment" type="String" default="center" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div class="slds-box banner" style="{!'height:' + v.bannerHeight + '; width:' + v.bannerWidth + '; background-color:' + v.backgroundColor}">
+        <div class="image-container">
+            <img src="{!v.leftImageUrl}" alt="{!v.leftImageAlt}" />
+        </div>
+        <div class="text-container" style="{!'font-size:' + v.textFontSize + '; font-weight:' + v.textFontWeight + '; color:' + v.textColor}">
+            <lightning:formattedRichText value="{!v.richTextContent}" />
+        </div>
+        <div class="image-container">
+            <img src="{!v.rightImageUrl}" alt="{!v.rightImageAlt}" />
+        </div>
+    </div>
+</aura:component>
